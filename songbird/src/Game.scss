@@ -1,0 +1,107 @@
+$secondary-color: seagreen;
+$light-color: whitesmoke;
+
+/**********************HEADER****************************/
+.header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 20px 30px 0;
+    .header__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.logo {
+    font-family: "Pacifico", cursive;
+    .logo-light {
+        color: $light-color;
+    }
+
+    .logo-dark {
+        color: $secondary-color;
+    }
+}
+/*****************MAIN************************/
+.quiz {
+    // display: flex;
+    // flex-direction: column;
+    text-align: center;
+    margin: 20px 30px;
+}
+
+.quiz__answer {
+    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quiz__button {
+    width: 100%;
+    background-color: $secondary-color;
+    border: 0;
+    padding: 7px 0;
+    color: $light-color;
+    border-radius: 5px;
+}
+
+/*****************CARD************************/
+.card-answer {
+    max-width: 60%;
+}
+
+.card-question {
+    width: 100%;
+}
+
+.card-body {
+    display: flex;
+}
+
+.card-image {
+    max-width: 200px;
+    max-height: 150px;
+}
+
+/**********************OPTIONS***********************/
+.options {
+    list-style: none;
+    cursor: pointer;
+}
+
+.options__circle {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(193, 186, 186, 0.5);
+    margin: 10px;
+    vertical-align: middle;
+}
+
+.options__circle-incorrect {
+    background-color: red;
+}
+
+.options__circle-correct {
+    background-color: $secondary-color;
+}
+
+/*********************MODAL**********************/
+.modal {
+    display: block;
+    text-align: center;
+    position: relative;
+}
+
+.modal-footer {
+    justify-content: center;
+}
+
+.modal-title {
+    padding: 1rem 1rem;
+    font-size: 50px;
+}
