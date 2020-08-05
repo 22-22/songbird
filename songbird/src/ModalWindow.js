@@ -1,5 +1,5 @@
 import React from 'react';
-import './Game.scss'
+import './App.scss';
 
 class ModalWindow extends React.Component {
     render() {
@@ -13,7 +13,8 @@ class ModalWindow extends React.Component {
                             <p>You got {this.props.points} out of {this.props.totalPoints} points!</p>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" onClick={this.props.playAgain} className="btn btn-primary">Play Again</button>
+                            <button type="button" onClick={this.props.playAgain}
+                                className="btn btn-primary">Play Again</button>
                             {/* <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button> */}
                         </div>
                     </div>

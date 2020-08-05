@@ -1,13 +1,12 @@
 import React from 'react';
 import GameHeader from './GameHeader';
-import CardQuestion from './CardQuestion';
-import CardAnswer from './CardAnswer';
+import Card from './Card';
 import Options from './Options';
 import ModalWindow from './ModalWindow';
 import data from './Data';
 import correctSound from './assets/correct.mp3';
 import incorrectSound from './assets/incorrect.mp3';
-import './Game.scss'
+import './App.scss';
 
 const maxPoint = data[0].length - 1;
 const totalPoints = data.length * maxPoint;
@@ -49,9 +48,13 @@ class Game extends React.Component {
     checkIfCorrect = () => {
         if (!this.state.isGuessed) {
             if (this.state.attemptData.name === this.state.correctData.name) {
-                const newPoints = this.state.points + (maxPoint - this.state.guessAttempts);
+                const newPoints = (this.state.guessAttempts <= maxPoint)
+                    ? this.state.points + (maxPoint - this.state.guessAttempts) : this.state.points;
                 this.setState({ isGuessed: true, points: newPoints });
                 this.playSound(correctSound);
+                if (this.state.gameRound === (data.length - 1)) {
+                    this.setState({ isFinished: true })
+                }
             } else {
                 this.setState({ guessAttempts: this.state.guessAttempts + 1 });
                 this.playSound(incorrectSound);
@@ -76,8 +79,6 @@ class Game extends React.Component {
                 attemptData: [],
                 correctData: data[newRound][randomNumber],
             })
-        } else {
-            this.setState({ isFinished: true })
         }
     }
 
@@ -92,7 +93,7 @@ class Game extends React.Component {
             guessAttempts: 0,
             points: 0,
             attemptData: [],
-            correctData: data[gameRound][randomNumber]
+            correctData: data[gameRound][randomNumber],
         })
     }
 
@@ -104,7 +105,7 @@ class Game extends React.Component {
             />
         } else {
             gameBody = (<main className="quiz">
-                <CardQuestion data={data}
+                <Card data={data} cardQuestion={"cardQuestion"}
                     gameRound={this.state.gameRound}
                     correctData={this.state.correctData}
                     isGuessed={this.state.isGuessed}
@@ -117,13 +118,16 @@ class Game extends React.Component {
                         correctData={this.state.correctData}
                         attemptData={this.state.attemptData}
                     />
-                    <CardAnswer
+                    <Card cardAnswer={"cardAnswer"}
                         gameRound={this.state.gameRound}
                         attemptData={this.state.attemptData}
+                        correctData={this.state.correctData}
                         isStarted={this.state.isStarted}
                     />
                 </div>
-                <button onClick={this.startNextRound} className="quiz__button">Next Level</button>
+                <button type="button" onClick={this.startNextRound}
+                    className={this.state.isGuessed ? "btn btn-lg btn-block btn-active"
+                        : "btn btn-primary btn-lg btn-block"}>Next level</button>
             </main>)
         }
 
