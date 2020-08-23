@@ -221,7 +221,7 @@ const Data = [
         name: 'Лунь',
         species: 'Circus cyaneus',
         description: 'Лунь – это небольшой сокол. Питается в основном мышевидными грызунами, основа его рациона – полёвки, хомяки, мыши. Оперение луня может быть пепельно-серым. С такой птицей связано сравнение «седой, как лунь».',
-        image: 'https://live.staticflickr.com/65535/49322743903_32f3922d9e.jpg',
+        image: 'https://live.staticflickr.com/65535/49882357767_36ede55048_h.jpg',
         audio: 'https://www.xeno-canto.org/sounds/uploaded/BLMSIUFTFU/XC513498-190709_1175_Cir.cyan-f.mp3'
       },
       {
@@ -279,7 +279,7 @@ const Data = [
         name: 'Пеликан',
         species: 'Pelecanus',
         description: 'Пеликаны — обитатели морей и рек. Ходят они неуклюже, но хорошо летают и плавают. Питаются в основном рыбой, устраивают коллективные охоты — выстроившись полукругом хлопают по воде крыльями и клювами и вытесняют напуганную рыбу на мелководье.',
-        image: 'https://live.staticflickr.com/7885/46523771945_9496c2a191.jpg',
+        image: 'https://live.staticflickr.com/65535/50258076337_d733ab5227_h.jpg',
         audio: 'https://www.xeno-canto.org/sounds/uploaded/XAMHIHFTZG/XC331138-call1.mp3'
       },
       {

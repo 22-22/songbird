@@ -52,6 +52,7 @@ class Game extends React.Component {
         let attemptData = this.filterAttemptData(attemptName);
         if (!isGuessed) {
             if (attemptName === correctData.name) {
+                this.playSound(correctSound);
                 const newPoints = (guessAttempts <= maxPoint)
                     ? points + (maxPoint - guessAttempts) : points;
                 this.setState({
@@ -61,16 +62,21 @@ class Game extends React.Component {
                     points: newPoints,
                     guessStatus: { ...guessStatus, [attemptName]: 'true' },
                 });
-                this.playSound(correctSound);
             } else {
-                this.setState({
-                    isStarted: true,
-                    attemptData,
-                    guessAttempts: guessAttempts + 1,
-                    guessStatus: { ...guessStatus, [attemptName]: 'false' },
-                });
                 this.playSound(incorrectSound);
+                if (guessStatus[attemptName] !== 'false') {
+                    this.setState({
+                        isStarted: true,
+                        attemptData,
+                        guessAttempts: guessAttempts + 1,
+                        guessStatus: { ...guessStatus, [attemptName]: 'false' },
+                    });
+                }
             }
+        } else {
+            this.setState({
+                attemptData,
+            })
         }
     }
 
@@ -115,7 +121,7 @@ class Game extends React.Component {
         let currentData = data[gameRound].map(data => data.name);
         return (
             <>
-                <GameHeader gameRound={gameRound} points={points} />
+                <GameHeader gameRound={gameRound} points={points} isFinished={isFinished} />
                 {isFinished ||
                     (<main className="quiz">
                         <Card

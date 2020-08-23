@@ -163,7 +163,7 @@ body {
 /***********************PLAYER***************************/
 
 .rhap_container {
-    background-color: #9abde4  !important;
+    background-color: #9abde4 !important;
     border-radius: 5px;
 }
 
@@ -196,6 +196,10 @@ body {
 }
 
 @media (max-width: 768px) {
+    .app {
+        margin: 0;
+    }
+
     .quiz__answer {
         flex-direction: column;
         & ul {

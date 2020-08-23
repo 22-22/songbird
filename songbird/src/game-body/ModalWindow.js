@@ -12,8 +12,7 @@ export const ModalWindow = ({ points, totalPoints, playAgain }) => {
                             <p className="modal-victory">ABSOLUTE VICTORY!</p> :
                             <h4>You finished the game!</h4>
                         }
-                        <h5>You got <strong>{points}</strong>
-                            out of <strong>{totalPoints}</strong> points!</h5>
+                        <h5>You got <strong>{points}</strong> out of <strong>{totalPoints}</strong> points!</h5>
                     </div>
                     <div className="modal-footer">
                         <button type="button" onClick={playAgain}
