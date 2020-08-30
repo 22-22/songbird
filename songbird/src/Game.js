@@ -47,16 +47,14 @@ class Game extends React.Component {
         audio.play();
     }
 
-    handleClickOptions = (attemptName) => {
+    checkIfCorrect = (attemptName) => {
         let { isGuessed, correctData, guessAttempts, points, guessStatus } = this.state;
-        let attemptData = this.filterAttemptData(attemptName);
         if (!isGuessed) {
             if (attemptName === correctData.name) {
                 this.playSound(correctSound);
                 const newPoints = (guessAttempts <= maxPoint)
                     ? points + (maxPoint - guessAttempts) : points;
                 this.setState({
-                    attemptData,
                     isStarted: true,
                     isGuessed: true,
                     points: newPoints,
@@ -67,17 +65,19 @@ class Game extends React.Component {
                 if (guessStatus[attemptName] !== 'false') {
                     this.setState({
                         isStarted: true,
-                        attemptData,
                         guessAttempts: guessAttempts + 1,
                         guessStatus: { ...guessStatus, [attemptName]: 'false' },
                     });
                 }
             }
-        } else {
-            this.setState({
-                attemptData,
-            })
         }
+    }
+    
+    handleClickOptions = (attemptName) => {
+        let attemptData = this.filterAttemptData(attemptName);
+        this.setState({
+            attemptData,
+        }, this.checkIfCorrect(attemptName))
     }
 
     createGuessStatusArray = (round) => {
