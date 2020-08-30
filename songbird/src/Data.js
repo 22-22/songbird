@@ -1,304 +1,341 @@
 const Data = [
-    [       
-      {
-        id: 11,
-        name: 'Ворон',
-        species: 'Corvus corax',
-        description: 'Ворон – крупная птица. Длина тела достигает 70 сантиметров, размах крыльев – до полутора метров. Вороны населяют окрестности Тауэра. В Англии бытует поверье, что в день, когда черные вороны улетят от Тауэра, монархия рухнет.',
-        image: 'https://live.staticflickr.com//65535//49298804222_474cfe8682.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/XIQVMQVUPP/XC518684-Grands%20corbeaux%2009012020%20Suzon.mp3'
-      },
-      {
-        id: 12,
-        name: 'Журавль',
-        species: 'Grus grus',
-        description: 'Звуки, издаваемые журавлем, похожи на звонкое «кур-лы – кур-лы». Журавли чаще всего поют дуэтом – одна птица начинает запев со слога «кур», а вторая подхватывает «лы». Если птица поёт одна, то она издает только звук «кур».',
-        image: 'https://live.staticflickr.com/65535/49221158846_b0b69a58f1.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/BLMSIUFTFU/XC512582-190604_1087_Grus_tok.mp3'
-      },
-      {
-        id: 13,
-        name: 'Ласточка',
-        species: 'Delichon urbicum',
-        description: 'Для ласточек характерно негромкое щебетание. Песни ласточек не смолкают на протяжении всего лета. Исследователи различают у птиц до 6 щебечущих звуков: «вит», «ви-вит», «чивит», «чиривит» и т.п. Ласточки любят петь дуэтом.',
-        image: 'https://live.staticflickr.com//65535//48539007512_5029d2a9a0.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/VOLIQOYWKG/XC489247-190724_09.10h_huiszwaluw_biesbosch_amaliahoeve_roep_100%2Bex_fouragerend_gezien_%20%282%29.mp3'
-      },
-      {
-        id: 14,
-        name: 'Козодой',
-        species: 'Caprimulgus europaeus',
-        description: 'Козодой – неприметная птица, известная благодаря своему голосу. Песня козодоя звучит как монотонная трель похожая на тарахтение мотоцикла. Такое дребезжание слышно от заката до рассвета, его тональность, частота и громкость изменяются. ',
-        image: 'https://live.staticflickr.com/65535/48456345286_dbc8530027.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/VOLIQOYWKG/XC486956-190623_22.37h_nachtzwaluw_rechte%20heide_zang_ad%20_2ex_gezien_.mp3'
-      },
-      {
-        id: 15,
-        name: 'Кукушка',
-        species: 'Cuculus canorus',
-        description: 'Кукушку назвали так из-за особенностей ее песен. Звонкое «ку-ку» не спутать ни с какой другой птицей. Кукушки не строят гнезда, их потомство выращивают другие виды пернатых, которым кукушки подбрасывают свои яйца.',
-        image: 'https://live.staticflickr.com/65535/48377838151_e15f430ec1.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/VOLIQOYWKG/XC501461-190616_08.13h_koekoek_brabantse%20biesbosch%20jantjesplaat_roep_1%20ex_ad%20m_ter%20plaatse%20zingend_gezien_.mp3'
-      },
-      {
-        id: 16,
-        name: 'Синица',
-        species: 'Parus major',
-        description: 'В щебетании синиц различают более 40 различных звуковых сочетаний. Поют они практически круглый год, немного затихая только зимой. Синицы настоящие санитары леса. Одна пара синиц в период гнездования оберегает от вредителей десятки деревьев.',
-        image: 'https://live.staticflickr.com//65535//49366042493_c48c81d58d.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/RFGQDPLDEC/XC518417-Kj%C3%B8ttmeis%20XC%20Helg%C3%B8ya%20Elias%20A.%20Ryberg20200108133922_079.mp3'
-      }
-    ],
-    [
-      {
-        id: 21,
-        name: 'Воробей',
-        species: 'Passer domesticus',
-        description: 'Воробьи являются самыми известными и узнаваемыми пернатыми. Их легко узнать по пестрому оперению и задорному чириканью. Воробьи относятся к синатропному виду — они селятся поблизости к человеческому жилищу.',
-        image: 'https://live.staticflickr.com//65535//49366595303_06cf65b07e.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/CXFHOPIVAS/XC503224-191020_0134.mp3'
-      },
-      {
-        id: 22,
-        name: 'Грач',
-        species: 'Corvus frugilegus',
-        description: 'Грачи очень умные и сообразительные птицы. С помощью клюва они создают и используют простейшие орудия. У грачей развит рефлекс на звуки трактора. Услышав «тарахтение», они летят на звук – трактор пашет землю, значит, в этом месте много корма.',
-        image: 'https://live.staticflickr.com//65535//49347123322_291c86b016.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/RLRHCUIPIY/XC512540-gawron%20Suble%2019.12.19%20%2012.35.mp3'
-      },
-      {
-        id: 23,
-        name: 'Галка',
-        species: 'Coloeus monedula',
-        description: 'Слово «галка» произошло из старославянского языка и переводится как «чёрный». Этим словом часто называют воронов или других черных птиц. Латинское название галки «monedula» связывают со словами монета за любовь птицы к блестящим и ярким вещам.',
-        image: 'https://live.staticflickr.com//65535//49237149586_993cf685c5.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/GYAUIPUVNM/XC510498-Coloeus%20monedula_2019.11.13_11.55_01.mp3'
-      },
-      {
-        id: 24,
-        name: 'Певчий дрозд',
-        species: 'Turdus philomelos',
-        description: 'Дрозд — лучший певец из отряда воробьиных. Песня состоит только из красивых звучных свистов и коротких трелей. Чаще всего её можно услышать в утреннее и вечернее время. Поют дрозды в течении всего периода гнездования.',
-        image: 'https://live.staticflickr.com/65535/48979125763_e2534f54bd.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/BLMSIUFTFU/XC513326-190704_1146_TF-Glogow.mp3'
-      },
-      {
-        id: 25,
-        name: 'Сорока',
-        species: 'Pica pica',
-        description: 'Сорока очень трудолюбивая птица. Она строит до восьми гнёзд, а потом выбирает из них самое лучшее. Вход в гнездо сорок всегда обращен на юг, чтобы в жилище было теплее. Сороки являются единственными птицами, которые узнают себя в зеркале.',
-        image: 'https://live.staticflickr.com//65535//49360363066_ff02bb6a73.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/GYAUIPUVNM/XC500868-Pica%20pica2019.08.23_09.18_02.mp3'
-      },
-      {
-        id: 26,
-        name: 'Сойка',
-        species: 'Garrulus glandarius',
-        description: 'Когда сойка волнуется, хохолок на её голове взъерошивается. Птица старается создать устрашающее зрелище. Сойки умеют имитировать голоса других птиц, животных и звуки, которые создает человек. На зиму они делают большие запасы желудей и орехов.',
-        image: 'https://live.staticflickr.com//65535//49369678956_9a7465c7f4.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/TFOGOENSTQ/XC501517-191008_1590%201300.%20Eichelh%C3%A4her%20D%2C%20NW%2C%20LEV.%20Stephan%20Risch.mp3'
-      }
-    ],
-    [
-      {
-        id: 31,
-        name: 'Зяблик',
-        species: 'Fringilla coelebs',
-        description: 'В дикой природе насчитывается 450 видов зябликов. Зимой зяблики ведут стайный образ жизни. Иногда в их семьях можно увидеть воробьев. Запевают зяблики весной, с наступлением брачного периода. Их пение – это заливистые многоминутные рулады.',
-        image: 'https://live.staticflickr.com/65535/49143150817_2d3a2f6c1e.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC512407-150622_03%20zi%C4%99ba%20%282%29.mp3'
-      },
-      {
-        id: 32,
-        name: 'Клёст',
-        species: 'Loxia curvirostra',
-        description: 'Клестов называют «рождественскими» птицами. В естественных условиях они дают потомство зимой – в январе. Эти птицы утепляют свои гнезда мхом и шерстью животных, потому птенцам не холодно. В поисках шишек клесты могут улетать за 3500 км от гнезда.',
-        image: 'https://live.staticflickr.com//65535//49365470123_f2de66bb35.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/OTVUCEGYZN/XC495381-Kruisbek%20roep%20NHD%20290619.mp3'
-      },
-      {
-        id: 33,
-        name: 'Горлица',
-        species: 'Streptopelia turtur',
-        description: 'Горлица обитает в смешанных и широколиственных лесах, а также в городских парках и поселках. Птицы часто выбирают места жизни рядом с человеком и легко привыкают к людям. Благодаря мелодичному приятному пению горлиц часто разводят в домашних условиях.',
-        image: 'https://live.staticflickr.com/65535/48063004977_84252f9ceb.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC324106-Turkawka_Streptopelia_turtur_Poland_Jarek_Matusiak_2011625_07.mp3'
-      },
-      {
-        id: 34,
-        name: 'Дятел',
-        species: 'Dendrocopos major',
-        description: 'Дятел – заметная и шумная птица, часто живет рядом с человеком. С середины января до конца июня можно услышать «барабанную дробь» дятлов – трель от вибрации веток под быстрыми ударами клюва птицы. В хорошую погоду дробь слышна в радиусе 1,5 км.',
-        image: 'https://live.staticflickr.com/65535/49339376578_e933426455.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC518928-AB-017%20dzi%C4%99cio%C5%82%20du%C5%BCy%20agresja%20%282%29.mp3'
-      },
-      {
-        id: 35,
-        name: 'Удод',
-        species: 'Upupa epops',
-        description: 'Удоды предпочитают жить на открытых ландшафтах с отдельными деревьями или рощами. Наиболее удобными для птицы являются лесостепь и саванна. Удод может выбирать места жительства рядом с человеком: пастбища, виноградники, фруктовые сады.',
-        image: 'https://live.staticflickr.com//65535//49226383598_6f8be86a06.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC477326-dudek%20%282%29.mp3'
-      },
-      {
-        id: 36,
-        name: 'Стриж',
-        species: 'Apus apus',
-        description: 'Стрижа можно увидеть практически в каждом уголке планеты. Они обитают как в лесных зонах, так и на открытых местностях. Живут стрижи крупными стаями. Большие колонии этих птиц можно увидеть в городах или на прибрежных скалах.',
-        image: 'https://live.staticflickr.com//65535//48386150031_7b749df74b.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/TMUAWSDHDJ/XC511871-G.mp3'
-      }
-    ],
-    [
-      {
-        id: 41,
-        name: 'Жаворонок',
-        species: 'Alauda arvensis',
-        description: 'Жаворонки — перелетные птицы. С начала сентября они отлетают на юг. Возвращаются они в начале марта, независимо от того, сошел снег или нет. По прилету жаворонков определяли наступление весны и пору, когда пора пахать землю.',
-        image: 'https://live.staticflickr.com/65535/47105096764_f751fba568.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC462158-Skowronek_Alauda_arvensis_Poland_Jarek_Matusiak_%20-006%20skowronek%20%282%29.mp3'
-      },
-      {
-        id: 42,
-        name: 'Соловей',
-        species: 'Luscinia luscinia',
-        description: 'Соловьи поют с начала мая и до конца лета. Каждая песня соловья состоит из 12 повторяющихся элементов, которые еще называют коленами. Кроме собственных трелей, соловьи легко и хорошо перенимают пение других птиц.',
-        image: 'https://live.staticflickr.com/7605/27669397735_f3c21758f2.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/HILVWSADVL/XC513809-R07_0052%20Thrush%20Nightingale%20Snipe.mp3'
-      },
-      {
-        id: 43,
-        name: 'Скворец',
-        species: 'Sturnus vulgaris',
-        description: 'Скворцы - перелётные птицы. Синхронный перелет больших стай скворцов называется мурмурацией. Это красивое и завораживающее явление – множество птиц будто танцуют в воздухе, образуя замысловатые фигуры, которые уменьшаются и увеличиваются в небе.',
-        image: 'https://live.staticflickr.com/65535/49357593971_9509fe1d7c.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/GYAUIPUVNM/XC515519-2020.01.01_17.24_01.MP3'
-      },
-      {
-        id: 44,
-        name: 'Иволга',
-        species: 'Oriolus oriolus',
-        description: 'Мелодичность голоса иволги сравнивают со звучанием флейты. Человеку сложно разглядеть иволгу, так как она обитает высоко на деревьях. Иволга не только очень красивая, но и  полезная птица. Она уничтожает ядовитых гусениц, которых не поедают другие птицы.',
-        image: 'https://live.staticflickr.com/65535/47102184004_58a93380b9.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/GYAUIPUVNM/XC491801-2019.07.07_06.28_01.mp3'
-      },
-      {
-        id: 45,
-        name: 'Свиристель',
-        species: 'Bombycilla garrulus',
-        description: 'У свиристели очень цепкие коготки, что помогает птице удерживаться на ветках и склевывать ягоды, которые труднее всего достать. В период ухаживаний самец предлагает самке ягоду или другое угощение. Если самка его принимает, то птицы создают пару.',
-        image: 'https://live.staticflickr.com//65535//49367433842_1b06da0e6b.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC517421-AB-004%20%282%29%20jemio%C5%82uszka.mp3'
-      },
-      {
-        id: 46,
-        name: 'Щегол',
-        species: 'Carduelis carduelis',
-        description: 'Щеглы поют красиво и мелодично. И в природе, и в неволе они щебечут почти круглый год. В пении щегла различают более 20 переливчатых трелей. Щеглы привыкают к людям, и даже могут возвратиться к хозяину после того, как их выпустили на волю',
-        image: 'https://live.staticflickr.com//65535//49366257253_db3ce48b9a.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/VOLIQOYWKG/XC489265-190724_07.58h_putter_biesbosch_%20boompjes%20langs%20open%20water_zang_1ex_ad_niet%20gezien_.mp3'
-      }
-    ],
-    [
-      {
-        id: 51,
-        name: 'Орёл',
-        species: 'Aquila nipalensis',
-        description: 'В древние времена орел был символом солнца. Орлы часто парят над землей, при этом скорость их перемещения может достигать 240 км/ч. Иллюзия медленного движения происходит из-за высоты полета – более 700 метров',
-        image: 'https://live.staticflickr.com//4835//43867392960_7105d71e19.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/KTBTZAHSXF/10_Aquila_nipalensis_al02D85.mp3'
-      },
-      {
-        id: 52,
-        name: 'Коршун',
-        species: 'Milvus migrans',
-        description: 'Коршуны – крупные хищники, в высоту они достигают около полуметра, а вес взрослых особей достигает 1 кг. Крылья узкие и длинные, их размах составляет 1,5 м. Коршуны часто гнездятся большими стаями и даже образуют крупные колонии.',
-        image: 'https://live.staticflickr.com//65535//48701190276_ee2a9ed594.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/SDPCHKOHRH/XC485740-2019-06-22%20Selenga%20Milan%20brun%20cris%20de%20quemandage%203.mp3'
-      },
-      {
-        id: 53,
-        name: 'Лунь',
-        species: 'Circus cyaneus',
-        description: 'Лунь – это небольшой сокол. Питается в основном мышевидными грызунами, основа его рациона – полёвки, хомяки, мыши. Оперение луня может быть пепельно-серым. С такой птицей связано сравнение «седой, как лунь».',
-        image: 'https://live.staticflickr.com/65535/49882357767_36ede55048_h.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/BLMSIUFTFU/XC513498-190709_1175_Cir.cyan-f.mp3'
-      },
-      {
-        id: 54,
-        name: 'Сокол',
-        species: 'Falco peregrinus',
-        description: 'Латинское название сокола Falco произошло от слова «серп» из-за серповидной формы крыльев. Длинные и широкие крылья позволяют соколу высоко подниматься в небо и свободно парить. Скорость полёта сокола достигает 280-320 километров в час.',
-        image: 'https://live.staticflickr.com//65535//49310710607_92a3a145a9.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/MMEJYLOPDO/XC496049-Pilgrimsfalk_06.mp3'
-      },
-      {
-        id: 55,
-        name: 'Ястреб',
-        species: 'Accipiter gentilis',
-        description: 'Для всех ястребов характерны широкие и короткие крылья. Ещё один отличительный признак - белые «брови» над глазами. Славянские дружинники размещали изображение ястреба на своих знаменах, как символ отваги, мощи и безжалостности к врагам.',
-        image: 'https://live.staticflickr.com//65535//49024617331_b9d0d2c9b3.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/MMEJYLOPDO/XC512740-Duvh%C3%B6k_09.mp3'
-      },
-      {
-        id: 56,
-        name: 'Филин',
-        species: 'Bubo bubo',
-        description: 'Полет филина бесшумный, зрение очень острое. Эти особенности делают птицу непревзойденным ночным охотником. У филина нет естественных врагов, ни один зверь не охотится на взрослых птиц. А вот на птенцов нападают лисы и волки.',
-        image: 'https://live.staticflickr.com/65535/48137123012_393653c2e4.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/WNLIDKJKXT/XC518386-sense%20t%C3%ADtol.mp3'
-      }
-    ],
-    [
-      {
-        id: 61,
-        name: 'Альбатрос',
-        species: 'Diomedea exulans',
-        description: 'Альбатрос - самая крупная летающая птица в мире. Размах крыльев достигает три с половиной, вес - десять килограммов. Большую часть жизни альбатросы проводят в воздухе, покрывая над океанскими просторами огромные расстояния',
-        image: 'https://live.staticflickr.com/7557/16260253965_8e9430cb66.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/WOEAFQRMUD/XC293087-Diomedea%20exulans151120_T254.mp3'
-      },
-      {
-        id: 62,
-        name: 'Олуша',
-        species: 'Sula nebouxii',
-        description: 'Особенностью голубоногой олуши является не только насыщенный ярко-синий цвет лапок, но еще и тот факт, что они очень теплые. В то время как другие виды птиц греют кладки своим телом, голубоногая олуша делает это с помощью лапок',
-        image: 'https://live.staticflickr.com/800/40645471394_4422e69ed8.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/YHKQPPJDVP/XC411507-171217_1491%20BF%20Booby%205ft%20IDLP%201230%20mp3%20amp.mp3'
-      },    
-      {
-        id: 63,
-        name: 'Буревестник',
-        species: 'Puffinus griseus',
-        description: 'Размеры буревестниковых разные. Самые маленькие из них в длину составляют до 25 см, самые большие - до 1 м, при размахе крыльев около 2 м. Существует поверье, что появление буревестника в воздухе предвещает бурю, о чем говорит само название птицы.',
-        image: 'https://live.staticflickr.com//607//22136056020_935cb113f9.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/XQEVNREHJY/SHEARWATER%20Christmas%20Island_04_Motu_Isla%20de%20Pascua-Easter%20Island_CH_4MAR03_Alvaro%20Jaramillo.mp3'
-      },
-      {
-        id: 64,
-        name: 'Пеликан',
-        species: 'Pelecanus',
-        description: 'Пеликаны — обитатели морей и рек. Ходят они неуклюже, но хорошо летают и плавают. Питаются в основном рыбой, устраивают коллективные охоты — выстроившись полукругом хлопают по воде крыльями и клювами и вытесняют напуганную рыбу на мелководье.',
-        image: 'https://live.staticflickr.com/65535/50258076337_d733ab5227_h.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/XAMHIHFTZG/XC331138-call1.mp3'
-      },
-      {
-        id: 65,
-        name: 'Пингвин',
-        species: 'Aptenodytes forsteri',
-        description: 'Самец императорского пингвина достигает роста 130 см, его масса может приближаться к 50 кг. Из всех современных пингвинов этот вид – самый крупный. Питание пингвина состоит из рыбы, кальмаров и криля. Охотятся птицы в океане большими группами.',
-        image: 'https://live.staticflickr.com/5202/5252413926_8e013a3efd.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/OOECIWCSWV/XC449827-LS100829%20King%20Penguin%20call%20A.mp3'
-      },
-      {
-        id: 66,
-        name: 'Чайка',
-        species: 'Larus argentatus',
-        description: 'Чайки населяют берега морей, озёр, рек, водохранилищ, болот, часто гнездятся на островах. С конца прошлого века чайки стали появляться в крупных городах, где устраивает гнёзда на крышах зданий. Все чайки ведут колониальный образ жизни.',
-        image: 'https://live.staticflickr.com/65535/48577115317_7034201dde.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/VOLIQOYWKG/XC501190-190801_06.50h_zilvermeeuw_duinen%20van%20goeree_roep_2ex_overvliegend_gezien_.mp3'
-      }
-    ]
-  ];
-  
-  export default Data;
+  [       
+    {
+      id: 11,
+      name: 'Lake Nakuru',
+      species: 'Kenya',
+      descriptionSound: 'Lake Nakuru morning atmosphere with flamingoes.',
+      description: 'Lake Nakuru is one of the Rift Valley soda lakes at an elevation of 1,754 m above sea level. It lies to the south of Nakuru, in the rift valley of Kenya and is protected by Lake Nakuru National Park. Nakuru means "Dust or Dusty Place" in the Maasai language.',
+      image: 'https://live.staticflickr.com/65535/50090524652_6b64f2d903_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07062010.wav'
+    },
+    {
+      id: 12,
+      name: 'Bahir Dar',
+      species: 'Ethiopia',
+      descriptionSound: "Bahir Dar, market atmosphere, with some traffic & distinct speech (Amharic).",
+      description: "Bahir Dar is one of the leading tourist destinations in Ethiopia, with a variety of attractions in the nearby Lake Tana and Blue Nile river. The city is known for its wide avenues lined with palm trees and a variety of colorful flowers.",
+      image: 'https://live.staticflickr.com/65535/50054922792_5568d0323a_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07052014.wav'
+    },
+    {
+      id: 13,
+      name: 'Swakopmund',
+      species: 'Namibia',
+      descriptionSound: 'Quiet street corner - traffic, children, pedestrians and distant ocean surf.',
+      description: 'Swakopmund is a city on the coast of western Namibia. Swakopmund is a beach resort and an example of German colonial architecture. A 2008 New York Times article describes the town as having "the dislocating feel of a Baltic Sea resort set in the tropics."',
+      image: 'https://live.staticflickr.com/65535/50057106818_1761e7899c_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07056061.wav'
+    },
+    {
+      id: 14,
+      name: 'Naukluft Mountains',
+      species: 'Namibia',
+      descriptionSound: 'Campsite (Naukluft Mountains) - light wind in trees, 7am, sound of birds with occaisional people.',
+      description: 'The Naukluft Mountains are a mountain range in central Namibia. They are known for their wildlife, including mountain zebras and leopards. The mountains have many small streams and waterfalls. ',
+      image: 'https://live.staticflickr.com/65535/49703829216_d068cd1e3e_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07056064.wav'
+    },
+    {
+      id: 15,
+      name: 'Cape Town',
+      species: 'South Africa',
+      descriptionSound: 'Open air flea market - busy bustling market with sellers crying out.',
+      description: 'Colloquially named the Mother City, Cape Town is the second most populous city in South Africa after Johannesburg and also the legislative capital of South Africa. In 2014, Cape Town was named the best place in the world to visit by both The New York Times and The Daily Telegraph.',
+      image: 'https://live.staticflickr.com/65535/50267451767_00b654a4dd_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07056070.wav'
+    },
+    {
+      id: 16,
+      name: 'Rain forest, south of Yaounde',
+      species: 'Cameroon',
+      descriptionSound: 'Mid afternoon tropical rain forest atmosphere, with crickets, tree frogs & rain on big leaves.',
+      description: `Tropical rainforests have been called the "jewels of the Earth" and the "world's largest pharmacy", because over one quarter of natural medicines have been discovered there. Rainforests are also responsible for 28% of the world's oxygen turnover.`,
+      image: 'https://live.staticflickr.com/3917/14664572958_1400cdd74f_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07062003.wav'
+    }
+  ],
+  [
+    {
+      id: 21,
+      name: 'New York',
+      species: 'USA',
+      descriptionSound: 'Times Square.',
+      description: 'Times Square is a major commercial intersection, tourist destination, entertainment center, and neighborhood in the Midtown Manhattan section of New York City. Brightly lit by numerous billboards and advertisements, it is sometimes referred to as "the Crossroads of the World", "the Center of the Universe", and "the heart of the world".',
+      image: 'https://live.staticflickr.com/65535/50255145741_89286ee417_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07051095.wav'
+    },
+    {
+      id: 22,
+      name: 'Niagara Falls',
+      species: 'USA',
+      descriptionSound: 'Niagara Falls, close perspective recording.',
+      description: 'Niagara Falls is a group of three waterfalls at the southern end of Niagara Gorge, spanning the border between the province of Ontario in Canada and the state of New York in the United States. Niagara Falls is famed both for its beauty and as a valuable source of hydroelectric power.',
+      image: 'https://live.staticflickr.com/65535/50271615872_1cb2a7b2ec_h.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/RLRHCUIPIY/XC512540-gawron%20Suble%2019.12.19%20%2012.35.mp3'
+    },
+    {
+      id: 23,
+      name: 'Philadelphia',
+      species: 'USA',
+      descriptionSound: "Downtown street atmosphere.",
+      description: "Philadelphia, colloquially Philly, is the largest city in the U.S. state of Pennsylvania, and the sixth-most populous U.S. city with a 2019 estimated population of 1,584,064. Before Europeans arrived, the Philadelphia area was home to the Lenape (Delaware) Indians in the village of Shackamaxon.",
+      image: 'https://live.staticflickr.com/65535/50270875938_835dcda69d_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07051101.wav'
+    },
+    {
+      id: 24,
+      name: 'Mississippi River',
+      species: 'USA',
+      descriptionSound: 'Steam boat journey with paddle wash.',
+      description: 'The Mississippi River is the second-longest river and chief river of the second-largest drainage system on the North American continent. The word Mississippi itself comes from Misi zipi, the French rendering of the Anishinaabe (Ojibwe or Algonquin) name for the river, Misi-ziibi (Great River).',
+      image: 'https://live.staticflickr.com/2193/2276754985_d81d5d8b1a_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07070214.wav'
+    },
+    {
+      id: 25,
+      name: 'Santa Monica',
+      species: 'USA',
+      descriptionSound: 'Bowling alley.',
+      description: 'Santa Monica is a beachfront city in western Los Angeles County, California. Due to a favorable climate and close proximity to Los Angeles, Santa Monica became a famed resort town by the early 20th century attracting many celebrities. Popular tourists sites include Pacific Park on the Santa Monica Pier and Palisades Park atop a bluff over the Pacific Ocean.',
+      image: 'https://live.staticflickr.com/65535/50254964783_bc04e15d69_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07051114.wav'
+    },
+    {
+      id: 26,
+      name: 'San Pedro',
+      species: 'USA',
+      descriptionSound: 'Oil derrick.',
+      description: 'San Pedro is a community within the city of Los Angeles, California. The district has grown from being dominated by the fishing industry to become primarily a working-class community within the city of Los Angeles.',
+      image: 'https://live.staticflickr.com/4643/27184988639_4540bfe604_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07051112.wav'
+    }
+  ],
+  [ 
+    {
+      id: 31,
+      name: 'Khatmandu',
+      species: 'Nepal',
+      descriptionSound: 'Busy street, with heavy traffic (rickshaws, cars, etc.), some distinct speech.',
+      description: 'Kathmandu is the capital and largest city of Nepal, with a population of around 1 million. Also known as the city of temples, it stands at an elevation of approximately 1,400 metres above sea level in the bowl-shaped Kathmandu valley in central Nepal.',
+      image: 'https://live.staticflickr.com/4560/37969734314_ddee4c503c_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07054141.wav'
+    },
+    {
+      id: 32,
+      name: 'Beijing',
+      species: 'China',
+      descriptionSound: "Platform of a railway station.",
+      description: "Beijing is the capital of the People's Republic of China and the world's most populous capital city, with over 21 million residents. Combining both modern and traditional architecture, Beijing is one of the oldest cities in the world, with a rich history dating back three millennia.",
+      image: 'https://live.staticflickr.com/3717/8995672016_ab6fea4f2e_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07051163.wav'
+    },
+    {
+      id: 33,
+      name: 'Hong Kong',
+      species: 'China',
+      descriptionSound: "Harbour skyline, evening.",
+      description: "Hong Kong maintains separate governing and economic systems from that of mainland China under a principle of 'one country, two systems'. The city has the largest number of skyscrapers of any city in the world, and its residents have some of the highest life expectancies in the world.",
+      image: 'https://live.staticflickr.com/65535/49769818611_0ef7e23ad1_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07051168.wav'
+    },
+    {
+      id: 34,
+      name: 'Mumbai',
+      species: 'India',
+      descriptionSound: 'Large, noisy crowd at Gateway of India, with hawkers in covered enclosure, slight echo.',
+      description: 'Mumbai (formerly known as Bombay) is the capital city of the Indian state of Maharashtra with a population of roughly 20 million. Mumbai is the birthplace of Indian cinema — Dadasaheb Phalke laid the foundations with silent movies followed by Marathi talkies.',
+      image: 'https://live.staticflickr.com/65535/50111824883_abd60f9c0f_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07054130.wav'
+    },
+    {
+      id: 35,
+      name: 'Yangtze river',
+      species: 'China',
+      descriptionSound: 'Quayside of Yangtze river, with hooters.',
+      description: 'The Yangtze or Yangzi is the longest river in Asia, the third-longest in the world and the longest in the world to flow entirely within one country. For thousands of years, the river has been used for water, irrigation, sanitation, transportation, industry, boundary-marking and war.',
+      image: 'https://live.staticflickr.com/65535/50178797901_0df822d087_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07051154.wav'
+    },
+    {
+      id: 36,
+      name: 'Kolkata',
+      species: 'India',
+      descriptionSound: `Market with chickens, speech, bells & man sweeping.`,
+      description: `Kolkata is the capital of the Indian state of West Bengal. The Port of Kolkata is India's oldest operating port. It is known as the "cultural capital of India" for the city's historical and architectural significance.`,
+      image: 'https://live.staticflickr.com/65535/50263914372_ca1a8b3326_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07054132.wav'
+    }
+  ],
+  [
+    {
+      id: 41,
+      name: 'Lake Grey',
+      species: 'Chile',
+      descriptionSound: 'Floating iceberg - Lake Grey.',
+      description: 'Grey Lake is a glacially fed lake in Torres del Paine National Park, southern Chile. The lake comes from the huge Gray Glacier, which is located in the northern part of the lake.',
+      image: 'https://live.staticflickr.com/65535/49105084027_1868ad6202_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07053063.wav'
+    },
+    {
+      id: 42,
+      name: 'La Paz',
+      species: 'Bolivia',
+      descriptionSound: 'Street, La Paz, with heavy traffic, horns, bells and footsteps.',
+      description: 'La Paz is the seat of government of the Plurinational State of Bolivia. This area had been the site of an Inca city, located on a major trading route. La Paz is also an important cultural center of Latin America, as it hosts several landmarks belonging to the colonial times.',
+      image: 'https://live.staticflickr.com/65535/50251602501_c758a622e4_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07053020.wav'
+    },
+    {
+      id: 43,
+      name: 'Amazon river',
+      species: 'Brazil',
+      descriptionSound: 'Amazon river port - unloading the boat.',
+      description: 'The Amazon River in South America is the largest river by discharge volume of water in the world. The historic consensus of geographic authorities has been to regard the Amazon as the second longest river in the world, with the Nile being the longest.',
+      image: 'https://live.staticflickr.com/65535/49461925726_2e5a9717e2_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07053055.wav'
+    },
+    {
+      id: 44,
+      name: 'Porto Alegre',
+      species: 'Brazil',
+      descriptionSound: 'City atmosphere.',
+      description: 'Porto Alegre is the capital and largest city of the Brazilian state of Rio Grande do Sul. In recent years, Porto Alegre hosted the World Social Forum. The city was one of the host cities of the 2014 FIFA World Cup, having previously been a venue for the 1950 FIFA World Cup.',
+      image: 'https://live.staticflickr.com/65535/50231046186_d4eaaf8a38_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07053049.wav'
+    },
+    {
+      id: 45,
+      name: 'Buenos Aires',
+      species: 'Argentina',
+      descriptionSound: 'Train Station.',
+      description: 'Buenos Aires is the capital and largest city of Argentina. Strongly influenced by European culture, Buenos Aires is sometimes referred to as the "Paris of South America". The Río de la Plata is known for being the birthplace of tango, which is considered an emblem of Buenos Aires.',
+      image: 'https://live.staticflickr.com/65535/50258668728_2b7f6640cb_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07053066.wav'
+    },
+    {
+      id: 46,
+      name: 'Tarata',
+      species: 'Bolivia',
+      descriptionSound: 'Church bells, also birdsong and distant car horns and traffic.',
+      description: "Tarata is a small city in the department of Cochabamba. It is prominent among the region's colonial towns for its surviving traditional architecture, and it is home to the annual festival of San Severino which marks the coming of the rains in late November.",
+      image: 'https://wikitravel.org/upload/shared/8/81/TarataStreet.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07053022.wav'
+    }
+  ],
+  [
+    {
+      id: 51,
+      name: 'Paris',
+      species: 'France',
+      descriptionSound: 'Arc De Triomphe, heavy traffic with occasional police whistles.',
+      description: 'The Arc de Triomphe honours those who fought and died for France in the French Revolutionary and Napoleonic Wars. Beneath the Arc is the Tomb of the Unknown Soldier from World War I.',
+      image: 'https://live.staticflickr.com/65535/50251472532_e26b4cda04_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07049093.wav'
+    },
+    {
+      id: 52,
+      name: 'Bratislava',
+      species: 'Slovakia',
+      descriptionSound: 'Street, traffic (including heavy trams), footsteps, some distinct speech (Slovak)',
+      description: "Bratislava is the capital and largest city of Slovakia. It occupies both banks of the River Danube and the left bank of the River Morava. The first known permanent settlement of the area began with the Linear Pottery Culture, around 5000 BC in the Neolithic era.",
+      image: 'https://live.staticflickr.com/65535/50258615988_e363279860_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07065008.wav'
+    },
+    {
+      id: 53,
+      name: 'Venice',
+      species: 'Italy',
+      descriptionSound: "St. Mark's Square: Quiet, early morning, occasional distant voices, footsteps and pigeons, no traffic.",
+      description: `Venice is a city in northeastern Italy. It is on a group of 118 small islands that are separated by canals and linked by over 400 bridges. Venice has been known as "La Dominante", "La Serenissima", "Queen of the Adriatic", "City of Water", "City of Masks", and "The Floating City".`,
+      image: 'https://live.staticflickr.com/65535/50264353272_de93877f64_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07031041.wav'
+    },
+    {
+      id: 54,
+      name: 'Bucharest',
+      species: 'Romania',
+      descriptionSound: 'Morning rush hour atmosphere, traffic with birdsong, passers-by.',
+      description: 'Bucharest is the capital and largest city of Romania, as well as its cultural, industrial, and financial centre. Bucharest was first mentioned in documents in 1459. Its architecture is a mix of historical (Neoclassical and Art Nouveau), interbellum (Bauhaus, and Art Deco), communist era and modern.',
+      image: 'https://live.staticflickr.com/65535/50255821581_abb4ec68e9_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07068043.wav'
+    },
+    {
+      id: 55,
+      name: 'London',
+      species: 'United Kingdom',
+      descriptionSound: "St. Paul's Cathedral, general atmosphere in the cathedral.",
+      description: "St Paul's Cathedral is an Anglican cathedral in London, United Kingdom, which, as the cathedral of the Bishop of London, serves as the mother church of the Diocese of London. The cathedral is one of the most famous and most recognisable sights of London.",
+      image: 'https://live.staticflickr.com/65535/50247351853_b59c1bc34d_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07065022.wav'
+    },
+    {
+      id: 56,
+      name: 'Copenhagen',
+      species: 'Denmark',
+      descriptionSound: 'Light traffic in Kongens Nytorv Square.',
+      description: 'Nytorv (English: New Square or New Market) is a public square in the centre of Copenhagen, Denmark. Together with the adjoining Gammeltorv it forms a common space, today part of the Strøget pedestrian zone.',
+      image: 'https://live.staticflickr.com/65535/50258509866_fe755a0fc0_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07061003.wav'
+    }
+  ],
+  [
+    {
+      id: 61,
+      name: 'Waiotapu',
+      species: 'New Zeland',
+      descriptionSound: 'Boiling mud - daytime',
+      description: `Waiotapu (Māori for "sacred waters") is an active geothermal area at the southern end of the Okataina Volcanic Centre. Due to dramatic geothermal conditions beneath the earth, the area has many hot springs noted for their colourful appearance, in addition to the Lady Knox Geyser, Champagne Pool, Artist's Palette, Primrose Terrace and boiling mud pools.`,
+      image: 'https://live.staticflickr.com/65535/50093509461_79e97d239c_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07059098.wav'
+    },
+    {
+      id: 62,
+      name: 'Pacific ocean',
+      species: 'New Zeland',
+      descriptionSound: 'Pacific ocean, rocky coastline north of Kaikoura',
+      description: `The Pacific Ocean is the largest and deepest of Earth's oceanic divisions. Ferdinand Magellan called it Mar Pacífico, which in both Portuguese and Spanish means "peaceful sea".`,
+      image: 'https://live.staticflickr.com/65535/50253370417_5fa55b4623_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07059111.wav'
+    },    
+    {
+      id: 63,
+      name: 'Waimangu',
+      species: 'New Zeland',
+      descriptionSound: 'Marble terrace, Waimangu Volcanic Valley',
+      description: 'The Waimangu (Māori for "black water") Volcanic Rift Valley is the hydrothermal system created on 10 June 1886 by the volcanic eruption of Mount Tarawera. The area contains Frying Pan Lake, which is the largest hot spring in the world, and the steaming and usually pale blue Inferno Crater Lake, the largest geyser-like feature in the world.',
+      image: 'https://live.staticflickr.com/65535/49919187306_8d072c1450_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07056030.wav'
+    },
+    {
+      id: 64,
+      name: 'Sydney',
+      species: 'Australia',
+      descriptionSound: 'Cicada and trash - lone cicada sings as bags of cans and bottles are thrown away. Urban atmosphere',
+      description: 'Sydney is the state capital of New South Wales and the most populous city in Australia and Oceania. Despite being one of the most expensive cities in the world, Sydney frequently ranks in the top ten most liveable cities in the world.',
+      image: 'https://live.staticflickr.com/65535/50270833592_78135ac017_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07074010.wav'
+    },
+    {
+      id: 65,
+      name: 'Bondi beach',
+      species: 'Australia',
+      descriptionSound: 'Surf - Bondi beach',
+      description: 'Bondi Beach is a popular beach and the name of the surrounding suburb in Sydney. "Bondi," originally "Boondi" is an Aboriginal word which has the same meaning as the word "surf" in English. Bondi Beach is about 1 kilometre long and receives many visitors throughout the year.',
+      image: 'https://live.staticflickr.com/65535/50176051247_f6e3a352b8_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07074001.wav'
+    },
+    {
+      id: 66,
+      name: 'Warratah Park',
+      species: 'Australia',
+      descriptionSound: 'Budgerigars and doves, occasional wind in dry leaves and crow calling',
+      description: "Waratah Park is a heritage-listed former Aboriginal land and fauna sanctuary. It is of State historical significance as the site where the iconic television series 'Skippy the Bush Kangaroo' was set and filmed 1967-1969. ",
+      image: 'https://live.staticflickr.com/7184/6868059997_6a67ded2ee_h.jpg',
+      audio: 'http://bbcsfx.acropolis.org.uk/assets/07074017.wav'
+    }
+  ]
+];
+
+export default Data;
+

@@ -32,6 +32,7 @@ body {
         margin-bottom: 5px;
         .header__top-score {
             font-size: 24px;
+            margin-bottom: 5px;
         }
     }
 }
@@ -59,10 +60,13 @@ body {
 .header__btn-active {
     background-color: $active-color;
 }
+
+.menu {
+    flex-wrap: wrap;
+}
 /*****************MAIN************************/
 
 .quiz {
-    text-align: center;
     margin: 20px 30px;
 }
 
@@ -70,13 +74,17 @@ body {
     margin: 20px 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    text-align: center;
 }
 
 /*****************CARD************************/
 
+.card {
+    display: block;
+}
+
 .card-answer {
-    width: 60%;
+    width: 62%;
     min-height: 310px;
 }
 
@@ -91,6 +99,10 @@ body {
 
 .card-description {
     padding: 0 1rem;
+}
+
+.card-description-sound {
+    margin: 0;
 }
 
 .card-image {
@@ -110,14 +122,15 @@ body {
     font-size: 34px;
 }
 
-// .card-title {
-//     border-bottom: 1px solid grey;
-// }
+.card-question__title {
+    margin-bottom: 1.5rem;
+}
 /**********************OPTIONS***********************/
 
 .options {
     width: 35%;
     cursor: pointer;
+    text-align: left;
 }
 
 .options__circle {
@@ -158,6 +171,7 @@ body {
 .modal-victory {
     font-size: 40px;
     color: $active-color;
+    margin-bottom: 40px;
 }
 
 /***********************PLAYER***************************/
@@ -216,6 +230,7 @@ body {
     .card-question__body {
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
     .card-question__body img {
@@ -230,5 +245,13 @@ body {
 
     .logo {
         font-size: 1.5rem;
+    }
+
+    .quiz {
+        margin: 20px 10px;
+    }
+
+    .card-body {
+        padding: 1.25rem 0.75rem;
     }
 }

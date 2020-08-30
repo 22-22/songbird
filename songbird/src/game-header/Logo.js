@@ -4,7 +4,7 @@ import '../index.scss';
 export const Logo = () => (
     <h1 className="logo">
         <span className="logo-light">Song</span>
-        <span className="logo-dark">Bird</span>
+        <span className="logo-dark">World</span>
     </h1>
 )
 
