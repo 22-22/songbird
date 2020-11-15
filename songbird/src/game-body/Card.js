@@ -19,7 +19,7 @@ export const Card = ({ isStarted, isGuessed, attemptData, correctData, cardType 
         </>
     ) : (
             <div className="card-body">
-                <p className="card-text">Послушайте плеер. Выберите птицу из списка</p>
+                <p className="card-text">Послушайте плеер. Выберите вариант из списка</p>
             </div>
         )
 
