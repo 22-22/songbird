@@ -32,6 +32,10 @@ class Game extends React.Component {
         this.initialState = this.state
     }
 
+    componentDidMount = () => {
+        console.log('Correct answer: ', this.state.correctData.name)
+    }
+
     getRandomNumber = () => {
         return Math.floor(Math.random() * data.length);
     }
@@ -72,7 +76,7 @@ class Game extends React.Component {
             }
         }
     }
-    
+
     handleClickOptions = (attemptName) => {
         let attemptData = this.filterAttemptData(attemptName);
         this.setState({
@@ -98,21 +102,25 @@ class Game extends React.Component {
             } else {
                 const randomNumber = this.getRandomNumber();
                 const guessStatus = this.createGuessStatusArray(newRound);
+                const correctData = data[newRound][randomNumber];
                 this.setState({
                     gameRound: newRound,
                     isStarted: false,
                     isGuessed: false,
                     guessAttempts: 0,
                     attemptData: [],
-                    correctData: data[newRound][randomNumber],
+                    correctData,
                     guessStatus,
                 })
+                console.log('Correct answer: ', correctData.name)
             }
         }
     }
 
     playAgain = () => {
-        this.setState(this.initialState)
+        this.setState(this.initialState,
+            () => console.log('Correct answer: ', this.state.correctData.name)
+        )
     }
 
     render() {
